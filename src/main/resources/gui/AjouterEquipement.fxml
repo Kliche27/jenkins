@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.collections.ObservableList?>
+<?import java.lang.String?>
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+           prefWidth="1100.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="controllers.AjouterEquipement">
+    <children>
+        <AnchorPane prefHeight="600.0" prefWidth="1100.0">
+            <children>
+                <BorderPane layoutX="0.0" layoutY="0.0" prefHeight="600.0" prefWidth="1100.0"
+                            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                            AnchorPane.topAnchor="0.0">
+                    <top>
+                        <AnchorPane prefHeight="42.0" prefWidth="1105.0"
+                                    style="-fx-border-color: #000; -fx-border-width: 5px 0.4px 0;">
+                            <children>
+                                <AnchorPane layoutY="9.6" prefHeight="38.0" prefWidth="221.0"
+                                            style="-fx-background-color: linear-gradient(to bottom right, #189ba7, #306090);">
+                                    <children>
+                                        <Label layoutX="32.0" layoutY="11.0" text="Event Management System"
+                                               textFill="WHITE">
+                                            <font>
+                                                <Font size="13.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                                <Circle fill="DODGERBLUE" layoutX="1025.0" layoutY="23.0" radius="11.0" stroke="BLACK"
+                                        strokeType="INSIDE"/>
+                                <Label layoutX="1043.0" layoutY="14.0" text="Active"/>
+                                <Circle fill="#89ff1f" layoutX="1086.0" layoutY="23.0" radius="4.0" stroke="BLACK"
+                                        strokeType="INSIDE"/>
+                                <Label layoutX="753.0" layoutY="15.0" text="MM:DD:YYYY"/>
+                                <Label layoutX="920.0" layoutY="14.0" text="Admin"
+                                       style="-fx-font-weight: bold; -fx-font-size: 13px;"/>
+                                <Label layoutX="235.2" layoutY="13.0" text="Dashboard From"
+                                       style="-fx-font-size: 15px;"/>
+                                <Label layoutX="860.0" layoutY="14.0" text="Welcome,"/>
+                            </children>
+                        </AnchorPane>
+                    </top>
+                    <left>
+                        <AnchorPane prefHeight="558.0" prefWidth="221.0"
+                                    style="-fx-background-color: linear-gradient(to bottom right, #189ba7, #306090);">
+                            <children>
+                                <FontAwesomeIcon glyphName="USERS" layoutX="80.0" layoutY="516.0" size="5em"/>
+                                <Label layoutX="32.0" layoutY="84.0" text="User ID:" textFill="WHITE"/>
+                                <Label layoutX="98.0" layoutY="84.0" text="1" textFill="WHITE"
+                                       style="-fx-font-weight: bold;"/>
+                                <Label layoutX="32.0" layoutY="110.0" text="Username:" textFill="WHITE"/>
+                                <Label layoutX="98.0" layoutY="110.0" text="Med" textFill="WHITE"
+                                       style="-fx-font-weight: bold;"/>
+                                <Line endX="100.0" layoutX="106.0" layoutY="136.0" startX="-100.0" stroke="WHITE"/>
+                                <Label layoutX="12.0" layoutY="154.0" text="Feature" textFill="WHITE"/>
+                                <Button layoutX="6.0" layoutY="182.0" prefHeight="38.0" prefWidth="206.0"
+                                        text="Dashboard"
+                                        style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;"/>
+                                <Button layoutX="5.0" layoutY="228.0" prefHeight="36.0" prefWidth="208.0"
+                                        text="Evenement"
+                                        style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;"/>
+                                <Button layoutX="5.0" layoutY="272.0" prefHeight="35.0" prefWidth="207.0"
+                                        text="Equipement"
+                                        style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;"/>
+                                <Button layoutX="5.0" layoutY="318.0" prefHeight="38.0" prefWidth="208.0"
+                                        text="Reclamation"
+                                        style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;"/>
+                                <Label layoutX="12.0" layoutY="366.0" text="Profile" textFill="WHITE"/>
+                                <Button layoutX="6.0" layoutY="392.0" prefHeight="36.0" prefWidth="206.0"
+                                        text="Profile Setting"
+                                        style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;"/>
+                            </children>
+                        </AnchorPane>
+                    </left>
+                    <center>
+                        <VBox layoutX="250" layoutY="100" alignment="CENTER" spacing="15"
+                              styleClass="white-bg radius shadow">
+                            <padding>
+                                <Insets top="20" right="20" bottom="20" left="20"/>
+                            </padding>
+                            <Label text="Ajouter un Équipement" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+                            <TextField fx:id="textFieldName" promptText="Nom de l'équipement" prefWidth="300"/>
+                            <TextField fx:id="textFieldType" promptText="Type de l'équipement" prefWidth="300"/>
+                            <ComboBox fx:id="comboBoxStatus">
+                                <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <String fx:value="Available"/>
+                                        <String fx:value="Reserved"/>
+                                        <String fx:value="Out of Service"/>
+                                    </FXCollections>
+                                </items>
+                            </ComboBox>
+
+
+                            <TextField fx:id="textFieldQuantity" promptText="Quantité" prefWidth="300"/>
+                            <Label fx:id="errorLabel" text="" style="-fx-text-fill: red;" visible="false"/>
+                            <TextField fx:id="textFieldDescription" promptText="Description" prefWidth="300"/>
+                            <Button fx:id="btnAjout" text="Ajouter" onAction="#ajoutEquipement" styleClass="btn-1"
+                                    prefWidth="200"/>
+                        </VBox>
+                    </center>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

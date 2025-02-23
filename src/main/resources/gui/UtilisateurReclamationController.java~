@@ -1,0 +1,102 @@
+package Controllers;
+
+
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.application.Platform;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.scene.shape.Circle;
+import javafx.util.Duration;
+
+import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.ResourceBundle;
+
+public class UtilisateurReclamationController implements Initializable {
+
+    @FXML
+    private Label Current_form;
+
+    @FXML
+    private Label Reclamation_ad_AdresseBtn;
+
+    @FXML
+    private Label Reclamation_ad_DateBtn;
+
+    @FXML
+    private Label Reclamation_ad_DescriptionBtn;
+
+    @FXML
+    private Label Reclamation_ad_EvNameBtn;
+
+    @FXML
+    private Label Reclamation_ad_FnameBtn;
+
+    @FXML
+    private Label Reclamation_ad_LnameBtn;
+
+    @FXML
+    private Label Reclamation_ad_RateBtn;
+
+    @FXML
+    private Button Reclamation_ad_SendBtn;
+
+    @FXML
+    private Button Reclamation_d_ClearBtn;
+
+    @FXML
+    private Button Reclamation_d_ComfirmBtn;
+
+    @FXML
+    private TextArea Reclamation_d_DescriptionBtn;
+
+    @FXML
+    private TextField Reclamation_d_EventNameBtn;
+
+    @FXML
+    private ComboBox<?> Reclamation_d_RateBtn;
+
+    @FXML
+    private DatePicker Reclamation_d_ScheduleBtn;
+
+    @FXML
+    private Button Reclamation_d_UpdateBtn;
+
+    @FXML
+    private Label date_time;
+
+    @FXML
+    private Button logout_btn;
+
+    @FXML
+    private Circle top_profile;
+
+    @FXML
+    private Label top_username;
+
+    public void runTime() {
+        SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy hh:mm:ss a");
+
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
+            date_time.setText(format.format(new Date())); // Update the label
+        }));
+
+        timeline.setCycleCount(Timeline.INDEFINITE); // Run indefinitely
+        timeline.play(); // Start the timeline
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        runTime();
+    }
+
+}
+

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.reponseAdminController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="222.0" layoutY="116.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="42.0" prefWidth="1105.0" styleClass="border-top" stylesheets="@MainFormDesign.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutY="9.6" prefHeight="38.0" prefWidth="221.0" styleClass="bg-color-1" stylesheets="@MainFormDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="32.0" layoutY="11.0" text="Event Management System" textFill="WHITE">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Circle fill="DODGERBLUE" layoutX="1025.0" layoutY="23.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.rightAnchor="73.0" />
+                        <Label layoutX="1043.0" layoutY="14.0" text="Active" AnchorPane.rightAnchor="32.0" />
+                        <Circle fill="#89ff1f" layoutX="1086.0" layoutY="23.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.rightAnchor="14.0" />
+                        <Label fx:id="date_time" layoutX="753.0" layoutY="15.0" text="MM:DD:YYYY" AnchorPane.rightAnchor="342.0" />
+                        <Label layoutX="920.0" layoutY="14.0" text="Admin" AnchorPane.rightAnchor="204.0">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="238.0" layoutY="13.0" prefHeight="22.0" prefWidth="467.0" text="Dashboard From" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="395.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="860.0" layoutY="14.0" text="Welcome," AnchorPane.rightAnchor="259.0" />
+                     </children>
+                  </AnchorPane>
+               </top>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="btn-1" stylesheets="@MainFormDesign.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="59.0" layoutY="79.0" prefHeight="557.6" prefWidth="878.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="770.4000244140625" layoutY="21.0" prefHeight="482.0" prefWidth="266.0" stylesheets="@MainFormDesign.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <TextArea fx:id="Reponse_d_Description" layoutX="29.0" layoutY="64.0" prefHeight="122.0" prefWidth="200.0" />
+                                    <Label layoutX="29.0" layoutY="34.0" text="Response " />
+                                    <TextField fx:id="Reponse_d_email" layoutX="29.0" layoutY="229.0" prefHeight="24.0" prefWidth="206.0" />
+                                    <Label layoutX="29.0" layoutY="206.0" text="Email Client" />
+                                    <ComboBox fx:id="Reponse_d_Etat" layoutX="29.0" layoutY="314.0" prefWidth="150.0" />
+                                    <Label fx:id="Reponse_email1" layoutX="29.0" layoutY="289.0" text="Status" />
+                                    <DatePicker fx:id="Reponse_d_ScheduleBtn" layoutX="26.0" layoutY="375.0" />
+                                    <Label layoutX="30.0" layoutY="357.0" text="Date" />
+                                    <Button fx:id="Reponse_d_AddBtn" layoutX="29.0" layoutY="409.0" mnemonicParsing="false" onAction="#addReponse" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: linear-gradient(to bottom right, #189ba7, #306090);" styleClass="btn-3" stylesheets="@MainFormDesignUtilisateur.css" text="Add" />
+                                    <Button fx:id="Repnse_d_UpateBtn" layoutX="31.0" layoutY="441.0" mnemonicParsing="false" onAction="#UpdateReponse" prefHeight="26.0" prefWidth="191.0" style="-fx-background-color: linear-gradient(to bottom right, #189ba7, #306090);" styleClass="btn-3" stylesheets="@MainFormDesignUtilisateur.css" text="Update" />
+                                    <Button fx:id="Reponse_d_ClearBtn" layoutX="136.0" layoutY="409.0" mnemonicParsing="false" onAction="#supprimerReponse" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: linear-gradient(to bottom right, #189ba7, #306090);" styleClass="btn-3" stylesheets="@MainFormDesignUtilisateur.css" text="Clear" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="20.399999618530273" layoutY="58.0" prefHeight="198.0" prefWidth="638.0" stylesheets="@MainFormDesign.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="list_reclamation_table" layoutX="-1.6" layoutY="24.0" prefHeight="235.0" prefWidth="618.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <columns>
+                                          <TableColumn fx:id="rec_mail_coln" prefWidth="146.39996337890625" text="Email" />
+                                          <TableColumn fx:id="rec_message_coln" prefWidth="226.4000244140625" text="Subject" />
+                                          <TableColumn fx:id="rec_date_coln" minWidth="0.0" prefWidth="169.5999755859375" text="DateRec" />
+                                          <TableColumn fx:id="rec_rate_coln" prefWidth="99.199951171875" text="Rate" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="17.399999618530273" layoutY="299.0" prefHeight="198.0" prefWidth="642.0" stylesheets="@MainFormDesign.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="list_reponse_table" layoutX="0.8" prefHeight="235.2" prefWidth="642.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <columns>
+                                          <TableColumn fx:id="msgrec" prefWidth="228.79996490478516" text="Reclamation Message" />
+                                          <TableColumn fx:id="subject_coln" prefWidth="214.40005493164062" text="Response" />
+                                          <TableColumn fx:id="date_rep_coln" prefWidth="96.79995727539062" text="DateRep" />
+                                          <TableColumn fx:id="etatcoln" minWidth="0.0" prefWidth="108.800048828125" text="Status" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <Label layoutX="20.399999618530273" layoutY="278.0" text="Response List" />
+                              <Label layoutX="24.399999618530273" layoutY="29.0" text="Reclamation List" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

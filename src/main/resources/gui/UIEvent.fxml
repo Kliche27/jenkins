@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Afficheruser">
+    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+        <BorderPane layoutX="222.0" layoutY="116.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <AnchorPane prefHeight="42.0" prefWidth="1105.0" stylesheets="@MainFormDesign.css" BorderPane.alignment="CENTER">
+                    <AnchorPane layoutY="9.6" prefHeight="38.0" prefWidth="221.0" styleClass="bg-color-1" stylesheets="@MainFormDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.topAnchor="0.0">
+                        <Label layoutX="32.0" layoutY="11.0" text="Event Management System" textFill="WHITE">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Label>
+                    </AnchorPane>
+                    <Circle fill="DODGERBLUE" layoutX="1025.0" layoutY="23.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.rightAnchor="73.0" />
+                    <Label layoutX="1043.0" layoutY="14.0" text="Active" AnchorPane.rightAnchor="32.0" />
+                    <Circle fill="#89ff1f" layoutX="1086.0" layoutY="23.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.rightAnchor="14.0" />
+                    <Label layoutX="262.0" layoutY="15.0" text="Welcome" AnchorPane.rightAnchor="788.0" />
+                </AnchorPane>
+            </top>
+            <left>
+                <AnchorPane prefHeight="558.0" prefWidth="221.0" styleClass="bg-color-1" stylesheets="@MainFormDesign.css" BorderPane.alignment="CENTER">
+                    <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="82.0" layoutY="65.0" selectionEnd="1" size="5em" />
+                    <Label layoutX="75.0" layoutY="85.0" text="participant" textFill="WHITE">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </Label>
+                    <Line endX="100.0" layoutX="106.0" layoutY="120.0" startX="-100.0" stroke="WHITE" />
+                    <Label layoutX="14.0" layoutY="137.0" text="Profile" textFill="WHITE" />
+                    <Button fx:id="profileSettingBtn" layoutX="2.0" layoutY="376.0" mnemonicParsing="false" onAction="#onClickProfileSetting" prefHeight="36.0" prefWidth="206.0" styleClass="btn-1" stylesheets="@MainFormDesign.css" text="Profile Setting" />
+               <Button fx:id="myReservationBtn" layoutX="3.0" layoutY="199.0" mnemonicParsing="false" onAction="#handlemesreservation" prefHeight="36.0" prefWidth="206.0" styleClass="btn-1" stylesheets="@MainFormDesign.css" text="My Reservation" />
+               <Button fx:id="reclamationBtn" layoutX="7.0" layoutY="261.0" mnemonicParsing="false" onAction="#reclamationOnClick" prefHeight="36.0" prefWidth="206.0" styleClass="btn-1" stylesheets="@MainFormDesign.css" text="My Reclamation" />
+
+                </AnchorPane>
+            </left>
+            <center>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="btn-1" stylesheets="@MainFormDesign.css" BorderPane.alignment="CENTER">
+                    <AnchorPane layoutX="59.0" layoutY="79.0" prefHeight="557.6" prefWidth="878.4" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane layoutX="14.0" layoutY="22.0" prefHeight="142.0" prefWidth="849.0" stylesheets="@MainFormDesign.css" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="14.0">
+                            <styleClass>
+                                <String fx:value="white-bg" />
+                                <String fx:value="shadow" />
+                            </styleClass>
+                            <ScrollPane layoutX="104.0" layoutY="-29.0" prefHeight="171.2" prefWidth="851.2000000000002" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <AnchorPane prefHeight="140.0" prefWidth="1050.0">
+                                    <AnchorPane layoutX="22.0" layoutY="11.0" prefHeight="110.0" prefWidth="194.0" stylesheets="@MainFormDesign.css">
+                                        <styleClass>
+                                            <String fx:value="bg-color-1" />
+                                            <String fx:value="radius" />
+                                        </styleClass>
+                                        <FontAwesomeIcon glyphName="CLIPBOARD" layoutX="14.0" layoutY="47.0" size="3em" text="" />
+                                        <Label layoutX="52.0" layoutY="80.0" text="Nombre Reclamation" textFill="WHITE" />
+                                        <Label layoutX="167.0" layoutY="23.0" text="0" textFill="WHITE" />
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="235.0" layoutY="11.0" prefHeight="110.0" prefWidth="194.0" stylesheets="@MainFormDesign.css">
+                                        <styleClass>
+                                            <String fx:value="bg-color-1" />
+                                            <String fx:value="radius" />
+                                        </styleClass>
+                                        <FontAwesomeIcon glyphName="USER" layoutX="14.0" layoutY="47.0" size="3em" />
+                                        <Label layoutX="76.0" layoutY="80.0" text="Total Evenement" textFill="WHITE" />
+                                        <Label layoutX="167.0" layoutY="23.0" text="0" textFill="WHITE" />
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="443.0" layoutY="11.0" prefHeight="110.0" prefWidth="194.0" stylesheets="@MainFormDesign.css">
+                                        <styleClass>
+                                            <String fx:value="bg-color-1" />
+                                            <String fx:value="radius" />
+                                        </styleClass>
+                                        <FontAwesomeIcon glyphName="USER" layoutX="14.0" layoutY="47.0" size="3em" />
+                                        <Label layoutX="129.0" layoutY="80.0" text="résolus " textFill="WHITE" />
+                                        <Label layoutX="167.0" layoutY="23.0" text="0" textFill="WHITE" />
+                                    </AnchorPane>
+                                </AnchorPane>
+                            </ScrollPane>
+                        </AnchorPane>
+                        <AnchorPane layoutX="13.0" layoutY="175.0" prefHeight="369.0" prefWidth="850.0" stylesheets="@MainFormDesign.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="192.0">
+                            <styleClass>
+                                <String fx:value="white-bg" />
+                                <String fx:value="shadow" />
+                            </styleClass>
+                            <AnchorPane layoutX="497.0" layoutY="17.0" prefHeight="154.0" prefWidth="340.0" stylesheets="@MainFormDesign.css">
+                                <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="shadow" />
+                                </styleClass>
+                                <AreaChart layoutX="-119.0" layoutY="-123.0" prefHeight="155.0" prefWidth="340.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                    </xAxis>
+                                    <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                    </yAxis>
+                                </AreaChart>
+                            </AnchorPane>
+                            <AnchorPane layoutX="497.0" layoutY="184.0" prefHeight="146.0" prefWidth="340.0" stylesheets="@MainFormDesign.css">
+                                <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="shadow" />
+                                </styleClass>
+                                <AreaChart layoutX="-190.0" prefHeight="150.0" prefWidth="340.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                    </xAxis>
+                                    <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                    </yAxis>
+                                </AreaChart>
+                            </AnchorPane>
+                            <TableView layoutX="23.0" layoutY="17.0" prefHeight="320.0" prefWidth="450.0">
+                                <columns>
+                                    <TableColumn prefWidth="75.0" text="IdRec" />
+                                    <TableColumn prefWidth="75.0" text="IdUser" />
+                                    <TableColumn prefWidth="75.0" text="IdEvent" />
+                                    <TableColumn prefWidth="75.0" text="Subject" />
+                                    <TableColumn prefWidth="75.0" text="DateRec" />
+                                    <TableColumn prefWidth="75.0" text="Rate" />
+                                </columns>
+                            </TableView>
+                        </AnchorPane>
+                    </AnchorPane>
+                    <AnchorPane layoutX="11.0" layoutY="17.0" prefHeight="507.0" prefWidth="854.0" stylesheets="@MainFormDesign.css">
+                        <styleClass>
+                            <String fx:value="white-bgt" />
+                            <String fx:value="radius" />
+                            <String fx:value="shadow" />
+                        </styleClass>
+                    </AnchorPane>
+                    <AnchorPane layoutX="12.8" layoutY="16.8" prefHeight="557.6" prefWidth="878.4" styleClass="bg-color-1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <Label layoutX="29.0" layoutY="22.0" stylesheets="@MainFormDesign.css" text="Liste des evenements">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <ListView fx:id="listViewEvenements" layoutX="22.0" layoutY="56.0" prefHeight="444.0" prefWidth="816.0" styleClass="list-view" />
+                        <Button fx:id="btnafficherR" layoutX="271.0" layoutY="23.0" mnemonicParsing="false" onAction="#handlereservation" styleClass="btn-ajouter" text="Reserver " />
+                  <Button fx:id="btnafficherR1" layoutX="354.0" layoutY="23.0" mnemonicParsing="false" styleClass="btn-ajouter" text="Reclamer" />
+                    </AnchorPane>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+    </AnchorPane>
+</StackPane>

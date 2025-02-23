@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Tooltip?>
+
+<?import javafx.scene.shape.Circle?>
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+           prefWidth="1100.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="controllers.ShowEquipmentController">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <BorderPane layoutX="222.0" layoutY="116.0" prefHeight="600.0" prefWidth="1100.0"
+                            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                            AnchorPane.topAnchor="0.0">
+                    <!-- Header Section -->
+                    <top>
+                        <AnchorPane prefHeight="42.0" prefWidth="1105.0"
+                                    style="-fx-border-color: #000; -fx-border-width: 5px 0.4px 0;">
+                            <children>
+                                <AnchorPane layoutY="9.6" prefHeight="38.0" prefWidth="221.0"
+                                            style="-fx-background-color: linear-gradient(to bottom right, #189ba7, #306090);">
+                                    <children>
+                                        <Label layoutX="32.0" layoutY="11.0" text="Event Management System"
+                                               textFill="WHITE">
+                                            <font>
+                                                <Font size="13.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                                <Circle fill="DODGERBLUE" layoutX="1025.0" layoutY="23.0" radius="11.0" stroke="BLACK"
+                                        strokeType="INSIDE"/>
+                                <Label layoutX="1043.0" layoutY="14.0" text="Active"/>
+                                <Circle fill="#89ff1f" layoutX="1086.0" layoutY="23.0" radius="4.0" stroke="BLACK"
+                                        strokeType="INSIDE"/>
+                                <Label layoutX="753.0" layoutY="15.0" text="MM:DD:YYYY"/>
+                                <Label layoutX="920.0" layoutY="14.0" text="Admin"
+                                       style="-fx-font-weight: bold; -fx-font-size: 13px;"/>
+                                <Label layoutX="235.2" layoutY="13.0" text="Dashboard From"
+                                       style="-fx-font-size: 15px;"/>
+                                <Label layoutX="860.0" layoutY="14.0" text="Welcome,"/>
+                            </children>
+                        </AnchorPane>
+                    </top>
+
+                    <!-- Sidebar Section -->
+                    <left>
+                        <AnchorPane prefHeight="558.0" prefWidth="221.0"
+                                    style="-fx-background-color: linear-gradient(to bottom right, #189ba7, #306090);">
+                            <children>
+                                <Label layoutX="32.0" layoutY="84.0" text="User ID:" textFill="WHITE"/>
+                                <Label layoutX="98.0" layoutY="84.0" text="1" textFill="WHITE"
+                                       style="-fx-font-weight: bold;"/>
+                                <Label layoutX="32.0" layoutY="110.0" text="Username:" textFill="WHITE"/>
+                                <Label layoutX="98.0" layoutY="110.0" text="Med" textFill="WHITE"
+                                       style="-fx-font-weight: bold;"/>
+                                <Line endX="100.0" layoutX="106.0" layoutY="136.0" startX="-100.0" stroke="WHITE"/>
+                                <Label layoutX="12.0" layoutY="154.0" text="Feature" textFill="WHITE"/>
+                                <Button layoutX="6.0" layoutY="182.0" prefHeight="38.0" prefWidth="206.0"
+                                        text="Dashboard"
+                                        style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;"/>
+                                <Button layoutX="5.0" layoutY="228.0" prefHeight="36.0" prefWidth="208.0"
+                                        text="Evenement"
+                                        style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;"/>
+                                <Button layoutX="5.0" layoutY="272.0" prefHeight="35.0" prefWidth="207.0"
+                                        text="Reservation"
+                                        style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;"/>
+                                <Button layoutX="5.0" layoutY="318.0" prefHeight="38.0" prefWidth="208.0"
+                                        text="Reclamation"
+                                        style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;"/>
+                                <Label layoutX="12.0" layoutY="366.0" text="Profile" textFill="WHITE"/>
+                                <Button layoutX="6.0" layoutY="392.0" prefHeight="36.0" prefWidth="206.0"
+                                        text="Profile Setting"
+                                        style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;"/>
+                            </children>
+                        </AnchorPane>
+                    </left>
+
+                    <!-- Center Section (TableView) -->
+                    <center>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+                            <children>
+                                <TableView fx:id="tableViewEquipment" layoutX="20" layoutY="20" prefWidth="650"
+                                           prefHeight="400">
+                                    <columns>
+                                        <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+                                        <TableColumn fx:id="colName" text="Name" prefWidth="120"/>
+                                        <TableColumn fx:id="colType" text="Type" prefWidth="120"/>
+                                        <TableColumn fx:id="colStatus" text="Status" prefWidth="100"/>
+                                        <TableColumn fx:id="colQuantity" text="Quantity" prefWidth="80"/>
+                                        <TableColumn fx:id="colDescription" text="Description" prefWidth="200"/>
+                                    </columns>
+                                </TableView>
+                                <!-- Add, Update, Delete Buttons without Icons -->
+                                <Button layoutX="700" layoutY="50" text="Add"
+                                        style="-fx-background-color: #189ba7; -fx-text-fill: white;"
+                                        onAction="#AddEquipement" prefWidth="120" prefHeight="40"/>
+
+                                <Button layoutX="700" layoutY="100" text="Update"
+                                        style="-fx-background-color: #189ba7; -fx-text-fill: white;"
+                                        prefWidth="120" onAction="#UpdateEquipement" prefHeight="40"/>
+
+                                <Button layoutX="700" layoutY="150" text="Delete"
+                                        style="-fx-background-color: red; -fx-text-fill: white;"
+                                        onAction="#deleteSelectedEquipment" prefWidth="120" prefHeight="40"/>
+
+                            </children>
+                        </AnchorPane>
+                    </center>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

@@ -1,0 +1,194 @@
+.white-bgt {
+    -fx-background-color: #fff;
+}
+
+.radius {
+    -fx-background-radius: 5px;
+}
+
+.shadow {
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.5) , 5, 0 , 0 , 0 );
+}
+
+.bg-color-1 {
+    -fx-background-color: linear-gradient(to bottom right, #189ba7, #306090);
+}
+.btn-1 {
+    -fx-background-color: transparent;
+    -fx-border-color: #fff; /* Changed to #fff (white) */
+    -fx-border-width: 1px;
+    -fx-text-fill: #fff;
+    -fx-font-family: Arial;
+    -fx-cursor: hand;
+    -fx-font-size: 13px;
+}
+
+.btn-1:hover {
+    -fx-background-color: #fff; /* Changed to #fff (white) */
+    -fx-text-fill: #000;
+}
+.white-bg {
+    -fx-background-color: #fff;
+}
+
+.border-top {
+    -fx-border-color: #000;
+    -fx-border-width: 5px 0.4px 0;
+}
+.btn-1 {
+    -fx-background-color: transparent;
+    -fx-border-color: #fff;
+    -fx-border-width: 1px;
+    -fx-text-fill: #fff;
+    -fx-font-family: Arial;
+    -fx-cursor: hand;
+    -fx-font-size: 13px;
+}
+
+.btn-1:hover {
+    -fx-background-color: #fff;
+    -fx-text-fill: #000;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to bottom right, #188ba7, #306090);
+    -fx-background-insets: 0 0 0 0;
+    -fx-background-radius: 8px 8px 0 0; /* Corrected radius */
+}
+
+.table-view .column-header, .filter { /* Added .filter back */
+    -fx-size: 40px; /* or whatever size you need */
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header .label { /* Added .label back */
+    -fx-font-family: Arial;
+    -fx-text-fill: #fff;
+}
+/* Style des boutons avec icônes et taille petite */
+.btn {
+    -fx-background-color: #87ceeb; /* Bleu ciel */
+    -fx-text-fill: white; /* Texte en blanc */
+    -fx-font-size: 16px;
+    -fx-padding: 5 10; /* Petits espacements */
+    -fx-border-radius: 50%; /* Bord arrondi pour boutons circulaires */
+    -fx-border-color: #00bfff; /* Bordure bleu ciel */
+    -fx-border-width: 2px;
+    -fx-transition: background-color 0.3s, transform 0.2s;
+    -fx-alignment: center; /* Centrer l'icône dans le bouton */
+}
+
+.btn:hover {
+    -fx-background-color: #00bfff; /* Survol avec un bleu ciel plus foncé */
+    -fx-border-color: #1e90ff; /* Bordure plus foncée au survol */
+    -fx-cursor: hand; /* Ajout d'un curseur main */
+}
+
+.btn .fa {
+    -fx-font-family: 'FontAwesome'; /* Police FontAwesome */
+    -fx-font-size: 20px; /* Taille de l'icône */
+    -fx-fill: white; /* Couleur de l'icône */
+}
+
+/* Style spécifique pour le bouton Ajouter */
+.btn-ajouter {
+    -fx-background-color: #87ceeb; /* Bleu ciel */
+    -fx-border-color: #00bfff; /* Bordure bleu ciel */
+}
+
+.btn-ajouter:hover {
+    -fx-background-color: #00bfff; /* Changement au survol */
+    -fx-border-color: #1e90ff; /* Bordure plus foncée */
+}
+
+/* Style spécifique pour le bouton Modifier */
+.btn-modifier {
+    -fx-background-color: #87ceeb; /* Bleu ciel */
+    -fx-border-color: #00bfff; /* Bordure bleu ciel */
+}
+
+.btn-modifier:hover {
+    -fx-background-color: #00bfff; /* Changement au survol */
+    -fx-border-color: #1e90ff; /* Bordure plus foncée */
+}
+
+/* Style spécifique pour le bouton Supprimer */
+.btn-supprimer {
+    -fx-background-color: #ff6347; /* Couleur rouge tomate pour Supprimer */
+    -fx-border-color: #ff4500; /* Bordure rouge tomate */
+}
+
+.btn-supprimer:hover {
+    -fx-background-color: #ff4500; /* Changement au survol */
+    -fx-border-color: #ff6347; /* Bordure plus foncée */
+}
+
+/* Style général pour le ListView */
+.list-view {
+    -fx-background-color: #e7f6ff; /* Bleu clair de fond */
+    -fx-border-color: #99c2ff; /* Bordure bleu ciel */
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    -fx-alignment: center-left;
+}
+
+/* Style des items dans la ListView */
+.list-view .list-cell {
+    -fx-background-color: #ffffff; /* Fond blanc pour les items */
+    -fx-background-insets: 0, 0;
+    -fx-border-color: #cce0ff; /* Bordure légère pour chaque élément */
+    -fx-border-width: 1px;
+    -fx-border-radius: 6px;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    -fx-text-fill: #333333; /* Texte gris foncé pour une bonne lisibilité */
+}
+
+/* Effet de survol sur les items */
+.list-view .list-cell:hover {
+    -fx-background-color: #b3d9ff; /* Survol bleu clair */
+    -fx-cursor: hand;
+}
+
+/* Effet de sélection */
+.list-view .list-cell:selected {
+    -fx-background-color: #4d90fe; /* Fond bleu vif pour les éléments sélectionnés */
+    -fx-text-fill: white; /* Texte blanc sur sélection */
+    -fx-border-color: #4d90fe; /* Bordure bleue autour de l'élément sélectionné */
+    -fx-border-width: 2px;
+    -fx-border-radius: 6px;
+}
+
+/* Style des items désactivés */
+.list-view .list-cell:disabled {
+    -fx-background-color: #f0f8ff; /* Fond bleu très clair pour désactivé */
+    -fx-text-fill: #b3b3b3; /* Texte gris clair pour désactivé */
+}
+
+/* Style des entêtes si besoin (pour les colonnes par exemple) */
+.list-view .list-cell .cell-header {
+    -fx-background-color: #0099cc; /* Bleu moyen pour les entêtes */
+    -fx-text-fill: #ffffff; /* Texte blanc sur entête */
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 8px;
+    -fx-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Séparation entre les items dans la ListView */
+.list-view .list-cell + .list-cell {
+    -fx-border-color: #d9e6ff; /* Légère bordure entre les items */
+    -fx-border-width: 1px;
+}
+
+
+
+/* Effet de focus */
+.list-view .list-cell:focused {
+    -fx-background-color: #99c2ff; /* Focus bleu pâle */
+    -fx-border-color: #66a3ff; /* Bordure bleue autour de l'élément en focus */
+}
